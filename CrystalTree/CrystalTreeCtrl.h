@@ -1,4 +1,4 @@
-#ifndef _CCRYSTALTREECTRL_H
+ï»¿#ifndef _CCRYSTALTREECTRL_H
 #define _CCRYSTALTREECTRL_H
 
 #pragma once
@@ -8,13 +8,13 @@
 
 struct CTC_PARAM
 {
-	void	*pValue;	// ¹ØÁªÖ¸Õë±äÁ¿
-	LPTSTR	pData;		// ¿Ø¼þ×ÔÉíÊý¾Ý
-	LPTSTR	lpText;		// ¿Ø¼þÎÄ±¾
-	LPTSTR	lpHint;		// ¿Ø¼þÌáÊ¾
+	void	*pValue;	// å…³è”æŒ‡é’ˆå˜é‡
+	LPTSTR	pData;		// æŽ§ä»¶è‡ªèº«æ•°æ®
+	LPTSTR	lpText;		// æŽ§ä»¶æ–‡æœ¬
+	LPTSTR	lpHint;		// æŽ§ä»¶æç¤º
 	UINT	nMin;
 	UINT	nMax;
-	WORD	nStyle;		// ¿Ø¼þ·ç¸ñ
+	WORD	nStyle;		// æŽ§ä»¶é£Žæ ¼
 };
 
 struct CTC
@@ -28,7 +28,7 @@ struct CTC
 
 enum CTC_STYLE
 {
-	CTCS_EDIT		= 0x00,	// ¸½¼Ó¿Ø¼þÀàÐÍ
+	CTCS_EDIT		= 0x00,	// é™„åŠ æŽ§ä»¶ç±»åž‹
 	CTCS_COMBOBOX	= 0x01,
 	CTCS_COMBOLBOX	= 0x02,
 	CTCS_PATHBOX	= 0x03,
@@ -38,7 +38,7 @@ enum CTC_STYLE
 	CTCS_HEXMODE	= 0x08,
 	CTCS_CHECKED	= 0x08,
 
-	CTCS_THIS		= 0x00,	// ¸½¼ÓÊý¾ÝÀàÐÍ
+	CTCS_THIS		= 0x00,	// é™„åŠ æ•°æ®ç±»åž‹
 	CTCS_LPTSTR		= 0x10,
 	CTCS_CSTRING	= 0x20,
 	CTCS_BYTE		= 0x30,
@@ -50,7 +50,7 @@ enum CTC_STYLE
 
 enum CTC_EX_STYLE
 {
-	CTCS_EX_GETTXT	= 0x0100,	// ¹ØÁª±äÁ¿µÄÖµ×ª»»ÎªÎÄ±¾
+	CTCS_EX_GETTXT	= 0x0100,	// å…³è”å˜é‡çš„å€¼è½¬æ¢ä¸ºæ–‡æœ¬
 	CTCS_EX_CMDRANGE= 0x0200,	// Cmd Range
 	CTCS_EX_DISIBLE = 0x0400,	// Cmd Range
 };
