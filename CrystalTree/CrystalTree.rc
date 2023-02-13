@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+Ôªø// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,12 +13,12 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// ÒÈŸ˛(ÒÈ?Ï—⁄≈ÕÏ˚˙?) resources
+// ‰∏≠Êñá(‰∏≠?‰∫∫Ê∞ëÂÖ±Âíå?) resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
 #ifdef _WIN32
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
-#pragma code_page(949)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(65001)
 #endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
@@ -48,8 +48,8 @@ BEGIN
     "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
     "LANGUAGE 4, 2\r\n"
     "#pragma code_page(949)\r\n"
-    "#include ""res\\CrystalTree.rc2""  // ﬁ™ Microsoft Visual C++ ???Ó‹?Íπ\r\n"
-    "#include ""afxres.rc""         // ?Ò◊?ÀÏ\r\n"
+    "#include ""res\\CrystalTree.rc2""  // Èùû Microsoft Visual C++ ???ÁöÑ?Ê∫ê\r\n"
+    "#include ""afxres.rc""         // ?ÂáÜ?‰ª∂\r\n"
     "#endif\r\n"
     "\0"
 END
@@ -74,14 +74,14 @@ IDR_MAINFRAME           ICON                    "res\\CrystalTree.ico"
 IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
     WS_SYSMENU
-CAPTION "CrystalTree ¡§∫∏"
-FONT 8, "±º∏≤", 0, 0, 0x2
+CAPTION "CrystalTree Ï†ïÎ≥¥"
+FONT 8, "Íµ¥Î¶º", 0, 0, 0x2
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
     LTEXT           "CrystalTree Version 1.0",IDC_STATIC,40,10,119,8,
                     SS_NOPREFIX
     LTEXT           "Copyright (C) 2007",IDC_STATIC,40,25,119,8
-    DEFPUSHBUTTON   "»Æ¿Œ",IDOK,178,7,50,16,WS_GROUP
+    DEFPUSHBUTTON   "ÌôïÏù∏",IDOK,178,7,50,16,WS_GROUP
 END
 
 IDD_CRYSTALTREE_DIALOG DIALOGEX 0, 0, 214, 231
@@ -89,33 +89,33 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION |
     WS_SYSMENU | WS_THICKFRAME
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "CrystalTree"
-FONT 8, "±º∏≤", 0, 0, 0x1
+FONT 8, "Íµ¥Î¶º", 0, 0, 0x1
 BEGIN
-    LTEXT           "¿Ã∏ß(&N)",IDC_STATIC,0,170,24,8
-    LTEXT           "»˘∆Æ(&H)",IDC_STATIC,0,185,24,8
+    LTEXT           "Ïù¥Î¶Ñ(&N)",IDC_STATIC,0,170,24,8
+    LTEXT           "ÌûåÌä∏(&H)",IDC_STATIC,0,185,24,8
     EDITTEXT        IDC_EDIT_LEFTNAME,28,168,80,12,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT_HINT,28,182,186,12,ES_AUTOHSCROLL
-    CONTROL         "¿–±‚¿¸øÎ(&R)",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | 
+    CONTROL         "ÏùΩÍ∏∞Ï†ÑÏö©(&R)",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | 
                     WS_TABSTOP,0,198,34,8
-    CONTROL         "16¡¯π˝(&H)",IDC_CHECK_HEXMODE,"Button",
+    CONTROL         "16ÏßÑÎ≤ï(&H)",IDC_CHECK_HEXMODE,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,0,208,48,8
-    CONTROL         "≈ÿΩ∫∆Æ ∞°¡Æø¿±‚(&X)",IDC_CHECK_GETTXT,"Button",BS_AUTOCHECKBOX | 
+    CONTROL         "ÌÖçÏä§Ìä∏ Í∞ÄÏ†∏Ïò§Í∏∞(&X)",IDC_CHECK_GETTXT,"Button",BS_AUTOCHECKBOX | 
                     WS_TABSTOP,52,208,42,8
-    LTEXT           "ƒ¡∆Æ∑— ¡æ∑˘(&T)",IDC_STATIC,96,208,39,8
+    LTEXT           "Ïª®Ìä∏Î°§ Ï¢ÖÎ•ò(&T)",IDC_STATIC,96,208,39,8
     COMBOBOX        IDC_COMBO_CTRLTYPE,134,206,80,74,CBS_DROPDOWNLIST | 
                     WS_VSCROLL | WS_TABSTOP
-    LTEXT           "¡¶æÓ µ•¿Ã≈Õ(&B)",IDC_STATIC,0,218,38,8
+    LTEXT           "Ï†úÏñ¥ Îç∞Ïù¥ÌÑ∞(&B)",IDC_STATIC,0,218,38,8
     EDITTEXT        IDC_EDIT_DATA,40,218,174,12,ES_AUTOHSCROLL
-    PUSHBUTTON      "∑ŒµÂ(&L)",IDC_BUTTON_LOAD,34,196,34,10
-    PUSHBUTTON      "±‚∫ª ≈∞ √ﬂ∞°(&K)",IDC_BUTTON_ADDPARENT,68,196,42,10
-    PUSHBUTTON      "√ﬂ∞°(&A)",IDC_BUTTON_ADD,110,196,34,10
-    PUSHBUTTON      "ªË¡¶(&D)",IDC_BUTTON_DEL,144,196,34,10
-    PUSHBUTTON      "¿˙¿Â(&S)",IDC_BUTTON_SAVE,178,196,34,10
-    PUSHBUTTON      "±≥√º(&C)",IDC_BUTTON_CHANGE,108,156,34,10
-    PUSHBUTTON      "ªÛ¥‹(&U)",IDC_BUTTON_UP,144,156,34,10
-    PUSHBUTTON      "«œ¥‹(&N)",IDC_BUTTON_DWON,180,156,34,10
-    PUSHBUTTON      "C&TR µ•¿Ã≈Õ √ﬂ∞°",IDC_BUTTON_APPEND,60,156,48,10
-    CONTROL         "π¸¿ß ∏Ì∑…(&M)",IDC_CHECK_CMDRANGE,"Button",
+    PUSHBUTTON      "Î°úÎìú(&L)",IDC_BUTTON_LOAD,34,196,34,10
+    PUSHBUTTON      "Í∏∞Î≥∏ ÌÇ§ Ï∂îÍ∞Ä(&K)",IDC_BUTTON_ADDPARENT,68,196,42,10
+    PUSHBUTTON      "Ï∂îÍ∞Ä(&A)",IDC_BUTTON_ADD,110,196,34,10
+    PUSHBUTTON      "ÏÇ≠Ï†ú(&D)",IDC_BUTTON_DEL,144,196,34,10
+    PUSHBUTTON      "Ï†ÄÏû•(&S)",IDC_BUTTON_SAVE,178,196,34,10
+    PUSHBUTTON      "ÍµêÏ≤¥(&C)",IDC_BUTTON_CHANGE,108,156,34,10
+    PUSHBUTTON      "ÏÉÅÎã®(&U)",IDC_BUTTON_UP,144,156,34,10
+    PUSHBUTTON      "ÌïòÎã®(&N)",IDC_BUTTON_DWON,180,156,34,10
+    PUSHBUTTON      "C&TR Îç∞Ïù¥ÌÑ∞ Ï∂îÍ∞Ä",IDC_BUTTON_APPEND,60,156,48,10
+    CONTROL         "Î≤îÏúÑ Î™ÖÎ†π(&M)",IDC_CHECK_CMDRANGE,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,162,171,48,8
 END
 
@@ -142,13 +142,13 @@ BEGIN
     BEGIN
         BLOCK "080403a8"
         BEGIN
-            VALUE "CompanyName", "TODO: <ÕÎﬁ…Ÿ£>"
-            VALUE "FileDescription", "TODO: <Ÿ˛ÀÏ?Ÿ•>"
+            VALUE "CompanyName", "TODO: <ÂÖ¨Âè∏Âêç>"
+            VALUE "FileDescription", "TODO: <Êñá‰ª∂?Êòé>"
             VALUE "FileVersion", "1.0.0.1"
             VALUE "InternalName", "CrystalTree.exe"
-            VALUE "LegalCopyright", "TODO: (C) <ÕÎﬁ…Ÿ£>°£‹¡◊∫·∂ÍÛ?◊◊°£"
+            VALUE "LegalCopyright", "TODO: (C) <ÂÖ¨Âè∏Âêç>„ÄÇ‰øùÁïôÊâÄÊúâ?Âà©„ÄÇ"
             VALUE "OriginalFilename", "CrystalTree.exe"
-            VALUE "ProductName", "TODO: <?˘°Ÿ£>"
+            VALUE "ProductName", "TODO: <?ÂìÅÂêç>"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END
@@ -215,10 +215,10 @@ END
 
 STRINGTABLE 
 BEGIN
-    IDS_ABOUTBOX            "?ÈÕ CrystalTree(&A)..."
+    IDS_ABOUTBOX            "?‰∫é CrystalTree(&A)..."
 END
 
-#endif    // ÒÈŸ˛(ÒÈ?Ï—⁄≈ÕÏ˚˙?) resources
+#endif    // ‰∏≠Êñá(‰∏≠?‰∫∫Ê∞ëÂÖ±Âíå?) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -233,11 +233,11 @@ END
 #define _AFX_NO_TRACKER_RESOURCES
 #define _AFX_NO_PROPERTY_RESOURCES
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-LANGUAGE 4, 2
-#pragma code_page(949)
-#include "res\CrystalTree.rc2"  // ﬁ™ Microsoft Visual C++ ???Ó‹?Íπ
-#include "afxres.rc"         // ?Ò◊?ÀÏ
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(65001)
+#include "res\CrystalTree.rc2"  // Èùû Microsoft Visual C++ ???ÁöÑ?Ê∫ê
+#include "afxres.rc"         // ?ÂáÜ?‰ª∂
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
