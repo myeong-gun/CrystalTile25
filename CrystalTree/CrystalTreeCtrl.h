@@ -1,4 +1,4 @@
-﻿#ifndef _CCRYSTALTREECTRL_H
+#ifndef _CCRYSTALTREECTRL_H
 #define _CCRYSTALTREECTRL_H
 
 #pragma once
@@ -19,9 +19,9 @@ struct CTC_PARAM
 
 struct CTC
 {
-	BYTE	nLeftNameLen;
-	BYTE	nHintLen;
-	BYTE	nDataLen;
+	UINT	nLeftNameLen;
+	UINT	nHintLen;
+	UINT	nDataLen;
 	BYTE	nStyle;
 	BYTE	nExStyle;
 };
