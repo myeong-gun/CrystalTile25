@@ -229,7 +229,7 @@ HTREEITEM CCrystalTreeDlg::SaveItem(HTREEITEM hItem, CStdioFile& file)
 		text=m_Tree.GetItemText(hItem);
 
 		CTC t; memset(&t,0,sizeof(t));
-		t.nLeftNameLen=text.GetLength()&0x7F;
+		t.nLeftNameLen=text.GetLength() & 0x7FFFFFFF;
 
 		if(pData)
 		{
@@ -245,7 +245,7 @@ HTREEITEM CCrystalTreeDlg::SaveItem(HTREEITEM hItem, CStdioFile& file)
 			t.nStyle=(BYTE)pData->nStyle;
 			t.nExStyle=pData->nStyle>>8;
 		}else
-			t.nLeftNameLen|=0x80;	//tree
+			t.nLeftNameLen|=0x80000000;	//tree
 
 		file.Write(&t, sizeof(t));
 		file.WriteString(text);
@@ -257,8 +257,10 @@ HTREEITEM CCrystalTreeDlg::SaveItem(HTREEITEM hItem, CStdioFile& file)
 		if(!pData)
 		{
 			SaveItem(m_Tree.GetChildItem(hItem), file);
-			BYTE Nul=0;
-			file.Write(&Nul, 1);
+			//BYTE Nul=0;
+			UINT Nul = 0;
+			file.Write(&Nul, 4);
+			file.Write(&Nul, 3);
 		}
 
 		hItem=m_Tree.GetNextItem(hItem, 1);
