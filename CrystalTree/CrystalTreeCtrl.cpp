@@ -1,4 +1,4 @@
-// CrystalTreeCtrl.cpp : ÊµÏÖÎÄ¼ş
+ï»¿// CrystalTreeCtrl.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -40,7 +40,7 @@ BEGIN_MESSAGE_MAP(CCrystalTreeCtrl, CTreeCtrl)
 END_MESSAGE_MAP()
 
 
-// CCrystalTreeCtrl ÏûÏ¢´¦Àí³ÌĞò
+// CCrystalTreeCtrl æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 CTC* CCrystalTreeCtrl::InsertTree(CTC *pCtc, HTREEITEM hParent)
 {
@@ -1084,7 +1084,7 @@ void CCrystalTreeCtrl::UpdateData(HTREEITEM hItem)
 
 			}
 
-			// Í¨Öª¸¸´°¿ÚÊı¾İÒÑ¾­¸üĞÂ
+			// é€šçŸ¥çˆ¶çª—å£æ•°æ®å·²ç»æ›´æ–°
 			int id=IsCmdItem(hItem);
 			if(id && id!=IDC_STATIC)
 			{
