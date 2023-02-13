@@ -1,4 +1,4 @@
-// CrystalTreeDlg.cpp : ʵ���ļ�
+﻿// CrystalTreeDlg.cpp : 实现文件
 //
 
 #include "stdafx.h"
@@ -10,20 +10,20 @@
 #endif
 
 
-// ����Ӧ�ó��򡰹��ڡ��˵���� CAboutDlg �Ի���
+// 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
 class CAboutDlg : public CDialog
 {
 public:
 	CAboutDlg();
 
-// �Ի�������
+// 对话框数据
 	enum { IDD = IDD_ABOUTBOX };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ֧��
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
-// ʵ��
+// 实现
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -41,7 +41,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 END_MESSAGE_MAP()
 
 
-// CCrystalTreeDlg �Ի���
+// CCrystalTreeDlg 对话框
 
 
 
@@ -73,15 +73,15 @@ BEGIN_MESSAGE_MAP(CCrystalTreeDlg, CDialog)
 END_MESSAGE_MAP()
 
 
-// CCrystalTreeDlg ��Ϣ��������
+// CCrystalTreeDlg 消息处理程序
 
 BOOL CCrystalTreeDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// ��\������...\���˵������ӵ�ϵͳ�˵��С�
+	// 将\“关于...\”菜单项添加到系统菜单中。
 
-	// IDM_ABOUTBOX ������ϵͳ���Χ�ڡ�
+	// IDM_ABOUTBOX 必须在系统命令范围内。
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -97,10 +97,10 @@ BOOL CCrystalTreeDlg::OnInitDialog()
 		}
 	}
 
-	// ���ô˶Ի����ͼ�ꡣ��Ӧ�ó��������ڲ��ǶԻ���ʱ����ܽ��Զ�
-	//  ִ�д˲���
-	SetIcon(m_hIcon, TRUE);			// ���ô�ͼ��
-	SetIcon(m_hIcon, FALSE);		// ����Сͼ��
+	// 设置此对话框的图标。当应用程序主窗口不是对话框时，框架将自动
+	//  执行此操作
+	SetIcon(m_hIcon, TRUE);			// 设置大图标
+	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	RECT rc;
 	GetClientRect(&rc);
@@ -110,7 +110,7 @@ BOOL CCrystalTreeDlg::OnInitDialog()
 
 	((CComboBox*)GetDlgItem(IDC_COMBO_CTRLTYPE))->SetCurSel(0);
 
-	return TRUE;  // ���������˿ؼ��Ľ��㣬���򷵻� TRUE
+	return TRUE;  // 除非设置了控件的焦点，否则返回 TRUE
 }
 
 void CCrystalTreeDlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -126,19 +126,19 @@ void CCrystalTreeDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
-// �����Ի���������С����ť������Ҫ����Ĵ���
-//  �����Ƹ�ͼ�ꡣ����ʹ���ĵ�/��ͼģ�͵� MFC Ӧ�ó���
-//  �⽫�ɿ���Զ���ɡ�
+// 如果向对话框添加最小化按钮，则需要下面的代码
+//  来绘制该图标。对于使用文档/视图模型的 MFC 应用程序，
+//  这将由框架自动完成。
 
 void CCrystalTreeDlg::OnPaint() 
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // ���ڻ��Ƶ��豸������
+		CPaintDC dc(this); // 用于绘制的设备上下文
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// ʹͼ���ڹ��������о���
+		// 使图标在工作矩形中居中
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
@@ -146,7 +146,7 @@ void CCrystalTreeDlg::OnPaint()
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
 
-		// ����ͼ��
+		// 绘制图标
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
@@ -155,7 +155,7 @@ void CCrystalTreeDlg::OnPaint()
 	}
 }
 
-//���û��϶���С������ʱϵͳ���ô˺���ȡ�ù����ʾ��
+//当用户拖动最小化窗口时系统调用此函数取得光标显示。
 HCURSOR CCrystalTreeDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
