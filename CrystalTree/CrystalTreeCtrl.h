@@ -19,9 +19,9 @@ struct CTC_PARAM
 
 struct CTC
 {
-	UINT	nLeftNameLen;
-	UINT	nHintLen;
-	UINT	nDataLen;
+	USHORT	nLeftNameLen;
+	USHORT	nHintLen;
+	USHORT	nDataLen;
 	BYTE	nStyle;
 	BYTE	nExStyle;
 };
