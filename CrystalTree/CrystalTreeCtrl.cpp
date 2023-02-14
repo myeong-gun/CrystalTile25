@@ -44,14 +44,12 @@ END_MESSAGE_MAP()
 
 CTC* CCrystalTreeCtrl::InsertTree(CTC *pCtc, HTREEITEM hParent)
 {
-	BYTE* start = (BYTE*)pCtc;
-
 	while(pCtc->nLeftNameLen)
 	{
 		//char tree = pCtc->nLeftNameLen&0x80;
 		//char len = pCtc->nLeftNameLen&0x7F;
-		UINT tree = pCtc->nLeftNameLen & 0x80000000;
-		UINT len = pCtc->nLeftNameLen & 0x7FFFFFFF;
+		UINT tree = pCtc->nLeftNameLen & 0x8000;
+		UINT len = pCtc->nLeftNameLen & 0x7FFF;
 		//BYTE *pData=(BYTE*)(pCtc+1);
 		BYTE* pData = (BYTE*)(pCtc + 1);
 		TCHAR ln[0x8000]={0};
